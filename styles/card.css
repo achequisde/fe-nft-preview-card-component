@@ -1,0 +1,124 @@
+.card {
+    background-color: var(--clr-card-bg);
+
+    width: clamp(200px, 100%, 325px);
+    padding: 2.1rem;
+    border-radius: 2rem;
+}
+
+.card__title {
+    font-size: 2.2rem;
+    padding: 1.5rem 0;
+    color: var(--clr-white);
+}
+
+.card__title:hover {
+    color: var(--clr-cyan);
+    transition: all 0.25s linear;
+    cursor: pointer;
+}
+
+.card__text {
+    font-size: var(--font-size-p);
+    color: var(--clr-soft-blue);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+}
+
+.card__image {
+    position: relative;
+}
+
+.card__image__image {
+    max-width: 100%;
+}
+
+.card__image__content__overlay {
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: cyan;
+    height: 99%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.25s linear;
+}
+
+.card__image__content__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all 0.25s linear;
+}
+
+.card__image__content:hover .card__image__content__overlay {
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.card__image__content:hover .card__image__content__image {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card__metadata {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-line);
+}
+
+.card__metadata img {
+    margin-right: 0.4rem;
+}
+
+.card__metadata__price {
+    color: var(--clr-cyan);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+}
+
+.card__metadata__days {
+    color: var(--clr-soft-blue);
+    font-weight: var(--font-weight-medium);
+    display: flex;
+    align-items: center;
+}
+
+.card__author {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--clr-soft-blue);
+    font-weight: var(--font-weight-medium);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__author__image {
+    height: 30px;
+    margin-right: 1.5rem;
+    border-radius: 100%;
+    border: 1px solid var(--clr-white);
+}
+
+.card__author__name {
+    color: var(--clr-white);
+}
+
+.card__author__name:hover {
+    color: var(--clr-cyan);
+    transition: all 0.25s linear;
+    cursor: pointer;
+}
+
+.card--border-radius {
+    border-radius: 1rem;
+}
